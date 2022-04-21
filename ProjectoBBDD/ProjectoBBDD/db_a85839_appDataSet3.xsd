@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="db_a85839_appDataSet3" targetNamespace="http://tempuri.org/db_a85839_appDataSet3.xsd" xmlns:mstns="http://tempuri.org/db_a85839_appDataSet3.xsd" xmlns="http://tempuri.org/db_a85839_appDataSet3.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="db_a85839_appConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db_a85839_appConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProjectoBBDD.Properties.Settings.GlobalReference.Default.db_a85839_appConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_UsersTableAdapter" GeneratorDataComponentClassName="view_UsersTableAdapter" Name="view_Users" UserDataComponentName="view_UsersTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_a85839_appConnectionString (Settings)" DbObjectName="db_a85839_app.dbo.view_Users" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID_User, Users, Email, Country FROM dbo.view_Users</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID_User" DataSetColumn="ID_User" />
+              <Mapping SourceColumn="Users" DataSetColumn="Users" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="Country" DataSetColumn="Country" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="db_a85839_appDataSet3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="db_a85839_appDataSet3" msprop:Generator_DataSetName="db_a85839_appDataSet3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="view_Users" msprop:Generator_RowEvHandlerName="view_UsersRowChangeEventHandler" msprop:Generator_RowDeletedName="view_UsersRowDeleted" msprop:Generator_RowDeletingName="view_UsersRowDeleting" msprop:Generator_RowEvArgName="view_UsersRowChangeEvent" msprop:Generator_TablePropName="view_Users" msprop:Generator_RowChangedName="view_UsersRowChanged" msprop:Generator_RowChangingName="view_UsersRowChanging" msprop:Generator_TableClassName="view_UsersDataTable" msprop:Generator_RowClassName="view_UsersRow" msprop:Generator_TableVarName="tableview_Users" msprop:Generator_UserTableName="view_Users">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_User" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="ID_User" msprop:Generator_ColumnPropNameInTable="ID_UserColumn" msprop:Generator_ColumnVarNameInTable="columnID_User" msprop:Generator_UserColumnName="ID_User" type="xs:int" />
+              <xs:element name="Users" msprop:Generator_ColumnPropNameInRow="Users" msprop:Generator_ColumnPropNameInTable="UsersColumn" msprop:Generator_ColumnVarNameInTable="columnUsers" msprop:Generator_UserColumnName="Users">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_UserColumnName="Email">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Country" msprop:Generator_ColumnPropNameInRow="Country" msprop:Generator_ColumnPropNameInTable="CountryColumn" msprop:Generator_ColumnVarNameInTable="columnCountry" msprop:Generator_UserColumnName="Country">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:view_Users" />
+      <xs:field xpath="mstns:ID_User" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
