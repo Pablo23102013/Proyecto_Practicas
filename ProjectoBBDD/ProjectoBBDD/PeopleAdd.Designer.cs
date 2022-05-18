@@ -39,7 +39,6 @@
             this.dba85839appDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.countryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.countryTableAdapter = new ProjectoBBDD.db_a85839_appDataSetTableAdapters.CountryTableAdapter();
-            this.Select_Pais = new System.Windows.Forms.ComboBox();
             this.db_a85839_appDataSet2 = new ProjectoBBDD.db_a85839_appDataSet2();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new ProjectoBBDD.db_a85839_appDataSet2TableAdapters.UsersTableAdapter();
@@ -51,19 +50,18 @@
             this.Text_ID = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_Company = new System.Windows.Forms.TextBox();
-            
             this.viewUsersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-     
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.kBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.db_a85839_appDataSet4 = new ProjectoBBDD.db_a85839_appDataSet4();
-            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.usersTableAdapter1 = new ProjectoBBDD.db_a85839_appDataSet4TableAdapters.UsersTableAdapter();
             this.iDUserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Company = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.db_a85839_appDataSet4 = new ProjectoBBDD.db_a85839_appDataSet4();
+            this.kBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter1 = new ProjectoBBDD.db_a85839_appDataSet4TableAdapters.UsersTableAdapter();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.db_a85839_appDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dba85839appDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countryBindingSource)).BeginInit();
@@ -73,9 +71,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.viewUsersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewUsersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a85839_appDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_a85839_appDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -141,22 +139,6 @@
             // 
             this.countryTableAdapter.ClearBeforeFill = true;
             // 
-            // Select_Pais
-            // 
-            this.Select_Pais.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Select_Pais.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.countryBindingSource, "Name_Country", true));
-            this.Select_Pais.DataSource = this.countryBindingSource;
-            this.Select_Pais.DisplayMember = "Name_Country";
-            this.Select_Pais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Select_Pais.FormattingEnabled = true;
-            this.Select_Pais.Location = new System.Drawing.Point(501, 50);
-            this.Select_Pais.Name = "Select_Pais";
-            this.Select_Pais.Size = new System.Drawing.Size(383, 28);
-            this.Select_Pais.TabIndex = 13;
-            this.Select_Pais.ValueMember = "Name_Country";
-            this.Select_Pais.SelectedIndexChanged += new System.EventHandler(this.Select_Pais_SelectedIndexChanged);
-            // 
             // db_a85839_appDataSet2
             // 
             this.db_a85839_appDataSet2.DataSetName = "db_a85839_appDataSet2";
@@ -198,6 +180,7 @@
             this.button_share.TabIndex = 16;
             this.button_share.Text = "SHARE";
             this.button_share.UseVisualStyleBackColor = false;
+            this.button_share.Click += new System.EventHandler(this.button_share_Click);
             // 
             // txt_Id_Share
             // 
@@ -244,12 +227,10 @@
             this.txt_Company.Size = new System.Drawing.Size(383, 26);
             this.txt_Company.TabIndex = 20;
             this.txt_Company.TextChanged += new System.EventHandler(this.txt_Company_TextChanged);
-
             // 
             // viewUsersBindingSource1
             // 
             this.viewUsersBindingSource1.DataMember = "view_Users";
-            // 
             // 
             // dataGridView1
             // 
@@ -269,22 +250,7 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(560, 214);
             this.dataGridView1.TabIndex = 21;
-            // 
-
-            // 
-            // db_a85839_appDataSet4
-            // 
-            this.db_a85839_appDataSet4.DataSetName = "db_a85839_appDataSet4";
-            this.db_a85839_appDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersBindingSource1
-            // 
-            this.usersBindingSource1.DataMember = "Users";
-            this.usersBindingSource1.DataSource = this.db_a85839_appDataSet4;
-            // 
-            // usersTableAdapter1
-            // 
-            this.usersTableAdapter1.ClearBeforeFill = true;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // iDUserDataGridViewTextBoxColumn
             // 
@@ -330,18 +296,46 @@
             this.Company.ReadOnly = true;
             this.Company.Width = 112;
             // 
+            // usersBindingSource1
+            // 
+            this.usersBindingSource1.DataMember = "Users";
+            this.usersBindingSource1.DataSource = this.db_a85839_appDataSet4;
+            // 
+            // db_a85839_appDataSet4
+            // 
+            this.db_a85839_appDataSet4.DataSetName = "db_a85839_appDataSet4";
+            this.db_a85839_appDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersTableAdapter1
+            // 
+            this.usersTableAdapter1.ClearBeforeFill = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.DisplayMember = "Name_Country";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(501, 53);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(383, 28);
+            this.comboBox1.TabIndex = 22;
+            this.comboBox1.ValueMember = "Name_Country";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // PeopleAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 467);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txt_Company);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Text_ID);
             this.Controls.Add(this.txt_Id_Share);
             this.Controls.Add(this.button_share);
-            this.Controls.Add(this.Select_Pais);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txt_Name);
@@ -360,9 +354,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.viewUsersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewUsersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_a85839_appDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_a85839_appDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -378,7 +372,6 @@
         private db_a85839_appDataSet db_a85839_appDataSet;
         private System.Windows.Forms.BindingSource countryBindingSource;
         private db_a85839_appDataSetTableAdapters.CountryTableAdapter countryTableAdapter;
-        private System.Windows.Forms.ComboBox Select_Pais;
         private db_a85839_appDataSet2 db_a85839_appDataSet2;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private db_a85839_appDataSet2TableAdapters.UsersTableAdapter usersTableAdapter;
@@ -403,5 +396,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn countryDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Company;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="db_a85839_appDataSet6" targetNamespace="http://tempuri.org/db_a85839_appDataSet6.xsd" xmlns:mstns="http://tempuri.org/db_a85839_appDataSet6.xsd" xmlns="http://tempuri.org/db_a85839_appDataSet6.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="db_a85839_appConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db_a85839_appConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ProjectoBBDD.Properties.Settings.GlobalReference.Default.db_a85839_appConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_Contry_and_ContinentsTableAdapter" GeneratorDataComponentClassName="view_Contry_and_ContinentsTableAdapter" Name="view_Contry_and_Continents" UserDataComponentName="view_Contry_and_ContinentsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db_a85839_appConnectionString (Settings)" DbObjectName="db_a85839_app.dbo.view_Contry_and_Continents" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Name_Country, Name_continents FROM dbo.view_Contry_and_Continents</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Name_Country" DataSetColumn="Name_Country" />
+              <Mapping SourceColumn="Name_continents" DataSetColumn="Name_continents" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="db_a85839_appDataSet6" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="db_a85839_appDataSet6" msprop:Generator_DataSetName="db_a85839_appDataSet6">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="view_Contry_and_Continents" msprop:Generator_RowEvHandlerName="view_Contry_and_ContinentsRowChangeEventHandler" msprop:Generator_RowDeletedName="view_Contry_and_ContinentsRowDeleted" msprop:Generator_RowDeletingName="view_Contry_and_ContinentsRowDeleting" msprop:Generator_RowEvArgName="view_Contry_and_ContinentsRowChangeEvent" msprop:Generator_TablePropName="view_Contry_and_Continents" msprop:Generator_RowChangedName="view_Contry_and_ContinentsRowChanged" msprop:Generator_RowChangingName="view_Contry_and_ContinentsRowChanging" msprop:Generator_TableClassName="view_Contry_and_ContinentsDataTable" msprop:Generator_RowClassName="view_Contry_and_ContinentsRow" msprop:Generator_TableVarName="tableview_Contry_and_Continents" msprop:Generator_UserTableName="view_Contry_and_Continents">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name_Country" msprop:Generator_ColumnPropNameInRow="Name_Country" msprop:Generator_ColumnPropNameInTable="Name_CountryColumn" msprop:Generator_ColumnVarNameInTable="columnName_Country" msprop:Generator_UserColumnName="Name_Country">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name_continents" msprop:Generator_ColumnPropNameInRow="Name_continents" msprop:Generator_ColumnPropNameInTable="Name_continentsColumn" msprop:Generator_ColumnVarNameInTable="columnName_continents" msprop:Generator_UserColumnName="Name_continents">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

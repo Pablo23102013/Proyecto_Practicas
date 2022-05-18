@@ -38,7 +38,6 @@
             this.date_End = new System.Windows.Forms.DateTimePicker();
             this.Add_People_btm = new System.Windows.Forms.Button();
             this.Create_Project_Btn = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txt_Creator_Project = new System.Windows.Forms.TextBox();
@@ -104,6 +103,7 @@
             this.date_Start.Size = new System.Drawing.Size(317, 26);
             this.date_Start.TabIndex = 5;
             this.date_Start.Value = new System.DateTime(2022, 4, 21, 11, 27, 17, 0);
+            this.date_Start.ValueChanged += new System.EventHandler(this.date_Start_ValueChanged);
             // 
             // date_End
             // 
@@ -112,7 +112,8 @@
             this.date_End.Name = "date_End";
             this.date_End.Size = new System.Drawing.Size(317, 26);
             this.date_End.TabIndex = 6;
-            this.date_End.Value = new System.DateTime(2022, 4, 21, 0, 0, 0, 0);
+            this.date_End.Value = new System.DateTime(2022, 4, 27, 0, 0, 0, 0);
+            this.date_End.ValueChanged += new System.EventHandler(this.date_End_ValueChanged);
             // 
             // Add_People_btm
             // 
@@ -134,15 +135,6 @@
             this.Create_Project_Btn.Text = "Create Project";
             this.Create_Project_Btn.UseVisualStyleBackColor = true;
             this.Create_Project_Btn.Click += new System.EventHandler(this.Create_Project_Btn_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "label3";
             // 
             // label4
             // 
@@ -174,6 +166,7 @@
             this.txt_Creator_Project.ReadOnly = true;
             this.txt_Creator_Project.Size = new System.Drawing.Size(235, 19);
             this.txt_Creator_Project.TabIndex = 12;
+            this.txt_Creator_Project.TextChanged += new System.EventHandler(this.txt_Creator_Project_TextChanged);
             // 
             // txt_Project_Company
             // 
@@ -196,7 +189,6 @@
             this.Controls.Add(this.txt_Creator_Project);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.Create_Project_Btn);
             this.Controls.Add(this.Add_People_btm);
             this.Controls.Add(this.date_End);
@@ -227,7 +219,6 @@
         private System.Windows.Forms.DateTimePicker date_End;
         private System.Windows.Forms.Button Add_People_btm;
         private System.Windows.Forms.Button Create_Project_Btn;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_Creator_Project;

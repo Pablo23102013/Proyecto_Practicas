@@ -13,6 +13,10 @@ namespace ProjectoBBDD
 {
     public partial class CreatreProject : Form
     {
+        public static string name_;
+        public static string data_inicio;
+        public static string data_fin;
+        public static int intDueño;
         public CreatreProject()
         {
             InitializeComponent();
@@ -36,6 +40,9 @@ namespace ProjectoBBDD
             sda2.Fill(dt2);
 
             txt_Project_Company.Text = dt2.Rows[0][0].ToString();
+
+            date_Start.Value = DateTime.Today;
+            date_End.Value = DateTime.Today.AddMonths(3);
         }
 
         private void Titulo_Click(object sender, EventArgs e)
@@ -52,6 +59,7 @@ namespace ProjectoBBDD
         {
 
         }
+        
 
         private void Create_Project_Btn_Click(object sender, EventArgs e)
         {
@@ -61,11 +69,11 @@ namespace ProjectoBBDD
             SqlConnection conn = new SqlConnection(ConnectionString);
             conn.Open();
 
-            string name = txt_NombreProjecto.Text;
-            string data_inicio = date_Start.Text;
-            string data_fin = date_End.Text;
+             name_ = txt_NombreProjecto.Text;
+             data_inicio = date_Start.Text;
+             data_fin = date_End.Text;
 
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM dbo.Projects WHERE Name='" + name + "' ", conn);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM dbo.Projects WHERE Name='" + name_ + "' ", conn);
             /* in above line the program is selecting the whole data from table and the matching it with the user name and password provided by user. */
             DataTable dt = new DataTable(); //this is creating a virtual table  
             sda.Fill(dt);
@@ -79,27 +87,66 @@ namespace ProjectoBBDD
 
                 try
                 {
-                    SqlDataAdapter sdan = new SqlDataAdapter("SELECT Users FROM dbo.Users WHERE email='" + Form1.Email() + "'", conn);
+                    SqlDataAdapter sdan = new SqlDataAdapter("SELECT ID_User FROM dbo.Users WHERE email='" + Form1.Email() + "'", conn);
 
                     DataTable dtn = new DataTable();
 
                     sdan.Fill(dtn);
 
                     string Dueño = dtn.Rows[0][0].ToString();
+                    intDueño = int.Parse(Dueño);
 
-                    string Query = "INSERT INTO dbo.Projects(Name,Start_Date,End_Date,ID_User_1)VALUES('" + name + "','" + data_inicio + "','" + data_fin + "','" + Dueño + "')";
+
+
+                    string Query = "INSERT INTO dbo.Projects(Name,Start_Date,End_Date)VALUES('" + name_ + "','" + data_inicio + "','" + data_fin + "')";
 
                     SqlCommand cmd = new SqlCommand(Query, conn);
                     cmd.ExecuteNonQuery();
+
+                    SqlDataAdapter sdan2 = new SqlDataAdapter("SELECT ID_Project FROM dbo.Projects WHERE Name='" + GetName() + "'", conn);
+                    DataTable dtn2 = new DataTable();
+                    sdan2.Fill(dtn2);
+
+                    string Pro = dtn2.Rows[0][0].ToString();
+                    int Project = int.Parse(Pro);
+
+                   
+
+                    string Query2 = "INSERT INTO dbo.User_Project(ID_User,Name,Start_Date,End_Date,ID_Project)VALUES('" + intDueño + "','" + GetName() + "','" + GetDateStart() + "','" + GetDateEnd() + "','" + Project + "')";
+
+                    SqlCommand cmd2 = new SqlCommand(Query2, conn);
+                    cmd2.ExecuteNonQuery();
                     conn.Close();
 
                     MessageBox.Show("Proyecto Registrado");
+
+                    
                 }
                 catch (Exception ex)
                 { MessageBox.Show(ex.Message); }
             }
         }
+        public static string GetName()
+        {
+            string Name = name_ ;
+            return Name;
+        }
+        public static string GetDateStart()
+        {
+            string D_Start = data_inicio;
+            return D_Start;
+        }
+        public static string GetDateEnd()
+        {
+            string D_End = data_fin;
+            return D_End;
+        }
+        public static int id_user ()
+        {
+            int Dueño_int = intDueño;
 
+            return Dueño_int;
+        }
         private void CreatreProject_Load(object sender, EventArgs e)
         {
 
@@ -116,6 +163,21 @@ namespace ProjectoBBDD
         }
 
         private void txt_Project_Company_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Creator_Project_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void date_End_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void date_Start_ValueChanged(object sender, EventArgs e)
         {
 
         }

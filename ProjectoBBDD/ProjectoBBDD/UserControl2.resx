@@ -117,32 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="TeamWorkNet (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TeamWorkNet (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TeamWorkNet_Logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TeamWorkNet_Logo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TeamWorkNet_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TeamWorkNet_Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1366_2000" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1366_2000.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Lowcarboneconomy (sin fondo) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Lowcarboneconomy (sin fondo) (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TeamWorkNet (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TeamWorkNet (2).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TeamWorkNet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TeamWorkNet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1f605" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1f605.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="8bit-PNG-Isolated-Pic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\8bit-PNG-Isolated-Pic1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

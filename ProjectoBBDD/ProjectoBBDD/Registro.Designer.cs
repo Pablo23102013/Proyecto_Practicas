@@ -48,6 +48,8 @@
             this.viewContryandContinentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.db_a85839_appDataSet1 = new ProjectoBBDD.db_a85839_appDataSet1();
             this.view_Contry_and_ContinentsTableAdapter = new ProjectoBBDD.db_a85839_appDataSet1TableAdapters.view_Contry_and_ContinentsTableAdapter();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TX_Company = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.countryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_a85839_appDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.viewContryandContinentsBindingSource)).BeginInit();
@@ -173,7 +175,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 306);
+            this.label2.Location = new System.Drawing.Point(17, 305);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 20);
             this.label2.TabIndex = 10;
@@ -208,6 +210,7 @@
             this.Select_Pais.Size = new System.Drawing.Size(616, 28);
             this.Select_Pais.TabIndex = 12;
             this.Select_Pais.ValueMember = "Name_Country";
+            this.Select_Pais.SelectedIndexChanged += new System.EventHandler(this.Select_Pais_SelectedIndexChanged);
             // 
             // viewContryandContinentsBindingSource
             // 
@@ -223,11 +226,32 @@
             // 
             this.view_Contry_and_ContinentsTableAdapter.ClearBeforeFill = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 343);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 20);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Company";
+            // 
+            // TX_Company
+            // 
+            this.TX_Company.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TX_Company.Location = new System.Drawing.Point(118, 343);
+            this.TX_Company.Name = "TX_Company";
+            this.TX_Company.Size = new System.Drawing.Size(616, 26);
+            this.TX_Company.TabIndex = 14;
+            this.TX_Company.TextChanged += new System.EventHandler(this.TX_Company_TextChanged);
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TX_Company);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.Select_Pais);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -274,5 +298,7 @@
         private db_a85839_appDataSet1 db_a85839_appDataSet1;
         private System.Windows.Forms.BindingSource viewContryandContinentsBindingSource;
         private db_a85839_appDataSet1TableAdapters.view_Contry_and_ContinentsTableAdapter view_Contry_and_ContinentsTableAdapter;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox TX_Company;
     }
 }

@@ -16,6 +16,8 @@ namespace ProjectoBBDD
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Cambiar a Form1
+            //Application.Run(new Form1());
             Application.Run(new Form1());
         }
     }

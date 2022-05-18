@@ -80,6 +80,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arbol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Arbol.Designer.cs">
+      <DependentUpon>Arbol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calendario.Designer.cs">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreatreProject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +123,37 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db_a85839_appDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="db_a85839_appDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_a85839_appDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_a85839_appDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_a85839_appDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_a85839_appDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_a85839_appDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_a85839_appDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_a85839_appDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_a85839_appDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_a85839_appDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Desconexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Desconexion.Designer.cs">
+      <DependentUpon>Desconexion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +163,12 @@
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Opciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Opciones.Designer.cs">
+      <DependentUpon>Opciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="PeopleAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +176,12 @@
       <DependentUpon>PeopleAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="Project.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project.Designer.cs">
+      <DependentUpon>Project.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registro.cs">
       <SubType>Form</SubType>
@@ -134,8 +189,47 @@
     <Compile Include="Registro.Designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Timesheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timesheet.Designer.cs">
+      <DependentUpon>Timesheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="time_Calandari.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="time_Calandari.Designer.cs">
+      <DependentUpon>time_Calandari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl2.Designer.cs">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaCalendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaCalendario.Designer.cs">
+      <DependentUpon>VentanaCalendario.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Arbol.resx">
+      <DependentUpon>Arbol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calendario.resx">
+      <DependentUpon>Calendario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreatreProject.resx">
       <DependentUpon>CreatreProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Desconexion.resx">
+      <DependentUpon>Desconexion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -143,8 +237,14 @@
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Opciones.resx">
+      <DependentUpon>Opciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PeopleAdd.resx">
       <DependentUpon>PeopleAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project.resx">
+      <DependentUpon>Project.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -158,6 +258,21 @@
     </Compile>
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timesheet.resx">
+      <DependentUpon>Timesheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="time_Calandari.resx">
+      <DependentUpon>time_Calandari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl2.resx">
+      <DependentUpon>UserControl2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaCalendario.resx">
+      <DependentUpon>VentanaCalendario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="db_a85839_appDataSet.xsc">
       <DependentUpon>db_a85839_appDataSet.xsd</DependentUpon>
@@ -214,6 +329,61 @@
     <None Include="db_a85839_appDataSet4.xss">
       <DependentUpon>db_a85839_appDataSet4.xsd</DependentUpon>
     </None>
+    <None Include="db_a85839_appDataSet5.xsc">
+      <DependentUpon>db_a85839_appDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="db_a85839_appDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_a85839_appDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_a85839_appDataSet5.xss">
+      <DependentUpon>db_a85839_appDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="db_a85839_appDataSet6.xsc">
+      <DependentUpon>db_a85839_appDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="db_a85839_appDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_a85839_appDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_a85839_appDataSet6.xss">
+      <DependentUpon>db_a85839_appDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="db_a85839_appDataSet7.xsc">
+      <DependentUpon>db_a85839_appDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="db_a85839_appDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_a85839_appDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_a85839_appDataSet7.xss">
+      <DependentUpon>db_a85839_appDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="db_a85839_appDataSet8.xsc">
+      <DependentUpon>db_a85839_appDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="db_a85839_appDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_a85839_appDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_a85839_appDataSet8.xss">
+      <DependentUpon>db_a85839_appDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="db_a85839_appDataSet9.xsc">
+      <DependentUpon>db_a85839_appDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="db_a85839_appDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_a85839_appDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_a85839_appDataSet9.xss">
+      <DependentUpon>db_a85839_appDataSet9.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -228,9 +398,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App.ico" />
     <None Include="Resources\TeamWorkNet_Logo1.png" />
     <None Include="Resources\Lowcarboneconomy %28sin fondo%29 %281%29.png" />
+    <None Include="Resources\1366_2000.png" />
+    <None Include="Resources\1f605.png" />
+    <None Include="Resources\8bit-PNG-Isolated-Pic1.png" />
     <Content Include="TeamWorkNet_Logo.ico" />
     <None Include="Resources\TeamWorkNet %282%29.jpg" />
     <None Include="Resources\TeamWorkNet_Logo.png" />
@@ -262,6 +434,35 @@
       <HintPath>$(SSDTUnitTestPath)\Microsoft.Data.Tools.Schema.Sql.UnitTestingAdapter.dll</HintPath>
       <Private>True</Private>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

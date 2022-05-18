@@ -43,7 +43,8 @@ namespace ProjectoBBDD
            // string ConnectionString = "Data Source=LAPTOP-E1RMVQD6\\SQLEXPRESS;Initial Catalog=App;Integrated Security=True";
 
             SqlConnection conn = new SqlConnection(ConnectionString);
-            conn.Open();
+            try { conn.Open(); }catch { MessageBox.Show(" Sorry, you could check your Connection, we also check ours😅"); }
+          
             string contrsaeña=Txt_contraseña.Text;
              email=Txt_Email.Text;
             SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM dbo.Users WHERE email='"+email+"' AND password='"+ contrsaeña+ "'", conn);
@@ -52,11 +53,7 @@ namespace ProjectoBBDD
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
             {
-                /* I have made a new page called home page. If the user is successfully authenticated then the form will be moved to the next form */
-              
-               new Home().Show();
-               
-               
+               new Home().Show(); 
             }
             else
                 MessageBox.Show("Invalid username or password");

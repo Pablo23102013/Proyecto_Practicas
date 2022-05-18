@@ -43,8 +43,9 @@ namespace ProjectoBBDD
             string Password=Txt_Password.Text;
             string Idioma=Idiomas.Text;
             string Pais = Select_Pais.Text;
+            string Empresa=TX_Company.Text;
 
-            string Query = "INSERT INTO dbo.Users(Users,Email,Password,Idioma,Country)VALUES('"+User+"','"+Email+"','"+Password+"','"+Idioma+"','"+Pais+"')";
+            string Query = "INSERT INTO dbo.Users(Users,Email,Password,Idioma,Country,Company)VALUES('"+User+"','"+Email+"','"+Password+"','"+Idioma+"','"+Pais+ "','" + Empresa + "')";
 
             SqlCommand cmd = new SqlCommand(Query,conn);
             cmd.ExecuteNonQuery();
@@ -136,6 +137,14 @@ namespace ProjectoBBDD
 
         }
 
-       
+        private void TX_Company_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Select_Pais_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

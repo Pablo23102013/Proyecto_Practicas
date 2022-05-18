@@ -63,6 +63,36 @@ namespace ProjectoBBDD.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1366_2000 {
+            get {
+                object obj = ResourceManager.GetObject("1366_2000", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1f605 {
+            get {
+                object obj = ResourceManager.GetObject("1f605", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8bit_PNG_Isolated_Pic {
+            get {
+                object obj = ResourceManager.GetObject("8bit-PNG-Isolated-Pic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lowcarboneconomy__sin_fondo___1_ {
             get {
                 object obj = ResourceManager.GetObject("Lowcarboneconomy (sin fondo) (1)", resourceCulture);
