@@ -3,3 +3,6 @@
 
 
 TeamworkNet is the name of the Desktop program that I created as a final year project.
+
+*It is a program for the management of European projects, which includes a Login, Registration.*
+
