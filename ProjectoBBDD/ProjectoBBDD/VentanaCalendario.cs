@@ -61,10 +61,7 @@ namespace ProjectoBBDD
 
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void BtEnviar_Click(object sender, EventArgs e)
         {
@@ -94,6 +91,10 @@ namespace ProjectoBBDD
             {
                 Hora_final = null;
                 hora_inicio = null;
+                panel1.Controls.Remove(date_Start);
+                panel1.Controls.Remove(end_date);
+                panel1.Update();
+                
             }
             SqlDataAdapter sdan2 = new SqlDataAdapter("SELECT ID_Project FROM dbo.Projects WHERE Name='"+ProjectoBBDD.Project.getProject()+"'",conn);
             DataTable dtn2 = new DataTable();
