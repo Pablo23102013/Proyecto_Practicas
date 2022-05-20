@@ -13,7 +13,7 @@
  <H3>ScreenShots</H3>
  
  <H3>Database</H3>
- 
+ <img with=150 height=150 src="https://github.com/Pablo23102013/Proyecto_Practicas/blob/master/Diagram.png">
  <H3>About</H3>
- **Thanks to the company LowCarbonEconomy for giving me the idea and the tools to create the project.**
+ <strong>Thanks to the company LowCarbonEconomy for giving me the idea and the tools to create the project.</strong>
 
