@@ -16,13 +16,14 @@ namespace ProjectoBBDD
         public static int Meses, Years;
         public static string static_month, static_year;
         public static string meses;
+        public static int dia;
         public static string ConnectionString = "Data Source=SQL5108.site4now.net;Initial Catalog=db_a85839_app;User Id=db_a85839_app_admin;Password=Pablo-23";
         public Calendario()
         {
             InitializeComponent();
             bot();
             user();
-            
+            Event();
 
         }
         public void Event()
@@ -35,7 +36,7 @@ namespace ProjectoBBDD
 
             SqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "Select * FROM dbo.Calendario_View WHERE Name='" + Project.getProject() + "'";
+            cmd.CommandText = "Select Event_,Fecha_Inicio,Fecha_Final,Tiempo_inicio,Tiempo_Final,Users FROM dbo.Calendario_View WHERE Name='" + Project.getProject() + "'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -51,11 +52,14 @@ namespace ProjectoBBDD
             Years = now.Year;
             DateTime startofmonnth = new DateTime(Years, Meses, 1);
             int day = DateTime.DaysInMonth(Years, Meses);
+            string daysemana = startofmonnth.ToString("dddd");
+            semana(daysemana);
             int dayoftheweek = Convert.ToInt32(startofmonnth.DayOfWeek.ToString("d") + 06);
-            Mes();
-            
+
             static_month = Meses.ToString();
             static_year = Years.ToString();
+
+            Mes();
 
             for (int i = 0; i < dayoftheweek; i++)
             {
@@ -111,95 +115,129 @@ namespace ProjectoBBDD
         {
 
         }
+
+        public void semana(string daysemana)
+        {
+            if (daysemana == "lunes")
+            {
+                dia = 0;
+            }
+            if (daysemana == "martes")
+            {
+                dia = 1;
+            }
+            if (daysemana == "miercoles")
+            {
+                dia = 2;
+            }
+            if (daysemana == "jueves")
+            {
+                dia = 3;
+            }
+            if (daysemana == "viernes")
+            {
+                dia = 4;
+            }
+            if (daysemana == "sabado")
+            {
+                dia = 5;
+            }
+            if (daysemana == "domingo")
+            {
+                dia = 6;
+            }
+        }
+ 
+       
         public void Mes()
         {
             
            if(Meses==1)
             {
-                lMes.Text = "January";
-                IYear.Text = Years.ToString();
-                Titulo.Controls.Add(lMes);
-                Titulo.Controls.Add(IYear);
+                LMes.Text = "January";
+                LYear.Text = Years.ToString();
+                Titulo.Controls.Add(LMes);
+                Titulo.Controls.Add(LYear);
                 
             }
             else if (Meses == 2)
             {
-                lMes.Text = "February";
-                IYear.Text = Years.ToString();
-                Titulo.Controls.Add(lMes);
-                Titulo.Controls.Add(IYear);
+                LMes.Text = "February";
+                LYear.Text = Years.ToString();
+                Titulo.Controls.Add(LMes);
+                Titulo.Controls.Add(LYear);
 
             }
            else if (Meses == 3)
             {
-                lMes.Text = "March";
-                IYear.Text = Years.ToString();
-                Titulo.Controls.Add(lMes);
-                Titulo.Controls.Add(IYear);
+                LMes.Text = "March";
+                LYear.Text = Years.ToString();
+                Titulo.Controls.Add(LMes);
+                Titulo.Controls.Add(LYear);
 
             }
             else if(Meses == 4)
             {
-                lMes.Text = "April";
-                IYear.Text = Years.ToString();
-                Titulo.Controls.Add(lMes);
-                Titulo.Controls.Add(IYear);
+                LMes.Text = "April";
+                LYear.Text = Years.ToString();
+                Titulo.Controls.Add(LMes);
+                Titulo.Controls.Add(LYear);
 
             }
             else if(Meses == 5)
             {
-                lMes.Text = "May";
-                IYear.Text = Years.ToString();
-                Titulo.Controls.Add(lMes);
-                Titulo.Controls.Add(IYear);
+                LMes.Text = "May";
+                LYear.Text = Years.ToString();
+                Titulo.Controls.Add(LMes);
+                Titulo.Controls.Add(LYear);
             }
             else if(Meses == 6)
             {
-                lMes.Text = "June";
-                IYear.Text = Years.ToString();
-                Titulo.Controls.Add(lMes);
-                Titulo.Controls.Add(IYear);
+                LMes.Text = "June";
+                LYear.Text = Years.ToString();
+                Titulo.Controls.Add(LMes);
+                Titulo.Controls.Add(LYear);
             }
             else if(Meses == 7)
             {
-                lMes.Text = "July";
-                IYear.Text = Years.ToString();
-                Titulo.Controls.Add(lMes);
-                Titulo.Controls.Add(IYear);
+                LMes.Text = "July";
+                LYear.Text = Years.ToString();
+                Titulo.Controls.Add(LMes);
+                Titulo.Controls.Add(LYear);
             }
             else if(Meses == 8)
             {
-                lMes.Text = "August";
-                IYear.Text = Years.ToString();
-                Titulo.Controls.Add(lMes);
-                Titulo.Controls.Add(IYear);
+                LMes.Text = "August";
+                LYear.Text = Years.ToString();
+                Titulo.Controls.Add(LMes);
+                Titulo.Controls.Add(LYear);
             }
             else if(Meses == 9)
             {
-                lMes.Text = "September"; IYear.Text = Years.ToString();
-                Titulo.Controls.Add(lMes);
-                Titulo.Controls.Add(IYear);
+                LMes.Text = "September"; LYear.Text = Years.ToString();
+                Titulo.Controls.Add(LMes);
+                Titulo.Controls.Add(LYear);
             }
             else if(Meses == 10)
             {
-                lMes.Text = "October";
-                IYear.Text = Years.ToString();
-                Titulo.Controls.Add(lMes);
-                Titulo.Controls.Add(IYear);
+                LMes.Text = "October";
+                LYear.Text = Years.ToString();
+                Titulo.Controls.Add(LMes);
+                Titulo.Controls.Add(LYear);
             }
             else if(Meses == 11)
             {
-                lMes.Text = "November";
-                IYear.Text = Years.ToString();
-                Titulo.Controls.Add(lMes);
-                Titulo.Controls.Add(IYear);
+                LMes.Text = "November";
+                LYear.Text = Years.ToString();
+                Titulo.Controls.Add(LMes);
+                Titulo.Controls.Add(LYear);
             }
            else if(Meses==12)
             {
-                lMes.Text = "December";
-                IYear.Text = Years.ToString();
-                Titulo.Controls.Add(lMes);
-                Titulo.Controls.Add(IYear);
+                LMes.Text = "December";
+                LYear.Text = Years.ToString();
+                Titulo.Controls.Add(LMes);
+                Titulo.Controls.Add(LYear);
             }
            
 
@@ -209,21 +247,25 @@ namespace ProjectoBBDD
         {
             Calendariopanel.Controls.Clear();
             Titulo.Controls.Clear();
-            if (Meses == 1)
+
+            if(Meses == 1)
             {
                 Years--;
                 Meses = 13;
             }
-         
+
             Meses--;
-            Mes();
-            
+
             static_month = Meses.ToString();
             static_year = Years.ToString();
 
             DateTime startofmonnth = new DateTime(Years, Meses, 1);
             int day = DateTime.DaysInMonth(Years, Meses);
+
+
             int dayoftheweek = Convert.ToInt32(startofmonnth.DayOfWeek.ToString("d"));
+            dayoftheweek = dayoftheweek - 1;
+
             Mes();
 
             for (int i = 0; i < dayoftheweek; i++)
@@ -238,6 +280,7 @@ namespace ProjectoBBDD
                 uday.days(i);
                 Calendariopanel.Controls.Add(uday);
             }
+
         }
 
         private void Calendario_Load(object sender, EventArgs e)
@@ -265,23 +308,23 @@ namespace ProjectoBBDD
         private void bt_Next_Click(object sender, EventArgs e)
         {
             Calendariopanel.Controls.Clear();
-            Titulo.Controls.Clear();
             if (Meses == 12)
             {
                 Years++;
                 Meses = 0;
             }
-
             Meses++;
-            Mes();
-            
+
             static_month = Meses.ToString();
             static_year = Years.ToString();
+
             DateTime startofmonnth = new DateTime(Years, Meses, 1);
             int day = DateTime.DaysInMonth(Years, Meses);
+
             int dayoftheweek = Convert.ToInt32(startofmonnth.DayOfWeek.ToString("d"));
+            dayoftheweek = dayoftheweek - 1;
 
-
+            Mes();
 
             for (int i = 0; i < dayoftheweek; i++)
             {
