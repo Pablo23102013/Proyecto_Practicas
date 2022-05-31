@@ -110,10 +110,7 @@ namespace ProjectoBBDD
             xlApp = new Excel.Application();
             xlWorkBook = xlApp.Workbooks.Add(misValue);
             xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-
-
            
-
             for (int i = 0; i <= dataGridView1.RowCount  - 1; i++)
             {
                 for (int j = 0; j <= dataGridView1.ColumnCount  - 1; j++)
@@ -132,7 +129,6 @@ namespace ProjectoBBDD
             releaseObject(xlApp);
 
             MessageBox.Show("Excel file created , you can find the file in Documents");
-       
 
         }
         private void releaseObject(object obj)
