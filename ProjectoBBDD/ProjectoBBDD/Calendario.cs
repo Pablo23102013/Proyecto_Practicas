@@ -54,7 +54,7 @@ namespace ProjectoBBDD
             int day = DateTime.DaysInMonth(Years, Meses);
             string daysemana = startofmonnth.ToString("dddd");
             semana(daysemana);
-            int dayoftheweek = Convert.ToInt32(startofmonnth.DayOfWeek.ToString("d") + 06);
+            int dayoftheweek = Convert.ToInt32(startofmonnth.DayOfWeek.ToString("d") + day);
 
             static_month = Meses.ToString();
             static_year = Years.ToString();

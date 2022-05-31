@@ -19,7 +19,7 @@ namespace ProjectoBBDD
         public UserControl2()
         {
             InitializeComponent();
-            displayEvent();
+           // displayEvent();
         }
         public void Conexion()
         {

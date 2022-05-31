@@ -129,7 +129,7 @@ namespace ProjectoBBDD
                     
                     Button b=new Button();
                     b.AutoSize = true;
-                    b.Text = dtn2.Rows[posicio1][0].ToString()+" "+posicio1;
+                    b.Text = dtn2.Rows[posicio1][0].ToString()+"  ID:"+posicio1;
                     
                     b.Location = newLoc;
                     // b.Click += new EventHandler(buttonclick);  
